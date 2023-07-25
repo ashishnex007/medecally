@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'> -->
+    <link rel="stylesheet" href="home-style.css" />
+    
+    <title>Medecally</title>
+  </head>
+  <body>
+    <div class="hero">
+      <nav>
+        <img src="images/logo.png" class="logo" width="40px" height="auto" />
+        <h1>
+          Medecally
+        </h1>
+        <ul>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">How it works</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+        <div>
+          <a onclick="startAdminLogin()" class="btn">Admin Login</a>
+          <a onclick="startUserLogin()" class="login-btn">User Login</a>
+        </div>
+          <img src="images/profile.png" width="50px" onclick="toggleMenu(event)" class="profile" height=auto>
+
+
+          <div class="submenuwrap" id="submenu">
+              <div class="submenu">
+                <div class="userinfo">
+                  <img src="./profile/user.png">
+                  <h2>Aalu Balu</h2>
+                </div>
+                <hr>
+                <a href="#" class="submenulink">
+                  <img src="./profile/profile.png" >
+                  <p>Edit profile</p>
+                </a>
+                <a href="#" class="submenulink">
+                  <img src="./profile/logout.png" >
+                  <p>logout</p>
+                </a>
+              </div>
+          </div>
+
+
+      </nav>
+      <div class="content">
+        <h1>Find your<br />Medical Records</h1>
+        <p>All your medeical records in one place</p>
+        <a href="#" class="login-btn">Join Now</a>
+      </div>
+      <img src="images/pic.png" class="feature-img" />
+    </div>
+    <section class="container">
+      <div class="about">
+        <h1>About</h1>
+        <p>
+          Hello there! We're wasting our lives on something really stupid that
+          we are not even sure what it's gonna end up. But still working our ass
+          off for this shit.
+        </p>
+        <p>But we love tech and it's growing potential</p>
+        <p>NOt sure if it makes any sense but fine.</p>
+        <br />
+        <h3>Technologies</h3>
+        <p>These are the technologies we are using</p>
+        <div>
+          <div class="about-img">
+            <img src="images/about.png" width="200px" height="auto" />
+          </div>
+          <ul>
+            <li>Javasript</li>
+            <li>Block Chain</li>
+            <li>Firebase</li>
+            <li>Web3</li>
+          </ul>
+          <br>
+        <h3>More info</h3>
+        <br>
+        <p>Songs I love</p>
+        <br>
+        <div>
+          <ul>
+            <li>Sabotage</li>
+            <li>Apex</li>
+            <li>So Far Away</li>
+            <li>Attention</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+<hr>
+<br>
+<h1 class="head">HIGHLIGHTS</h1>
+    <div class="wrap">
+    <section class="hexagon">
+      <div class="hexarea first">
+        <div class="hex">
+          <h3 class="box">features</h3>
+          <div class="info">
+            <p1>This is my kingdom</p1>
+          </div>
+        </div>
+        <div class="hex">
+          <h3 class="box">highlights</h3>
+          <div class="info">
+            <p1>This is my kingdom</p1>
+          </div>
+        </div>
+        <div class="hex">
+          <h3 class="box">what is this about0</h3>
+          <div class="info">
+            <p1>This is my kingdom</p1>
+          </div>
+        </div>
+        <div class="hex">
+          <h3 class="box">decentralized</h3>
+          <div class="info">
+            <p1>This is my kingdom</p1>
+          </div>
+        </div>
+      </div>
+      <div class="hexarea last">
+        <div class="hex">
+          <h3 class="box">crypto</h3>
+          <div class="info">
+            <p1>This is my kingdom</p1>
+          </div>
+        </div>
+        <div class="hex">
+          <h3 class="box">stuff</h3>
+          <div class="info">
+            <p1>This is my kingdom</p1>
+          </div>
+        </div>
+        <div class="hex">
+          <h3 class="box">random</h3>
+          <div class="info">
+            <p1>KUkka abhi</p1>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  </body>
+  <script>
+    function startUserLogin() {
+        fetch('/start/user')
+            .then(response => response.text())
+            .then(data => console.log(data))
+            .catch(error => console.error(error));
+    }
+
+    function startAdminLogin() {
+        fetch('/start/admin')
+            .then(response => response.text())
+            .then(data => console.log(data))
+            .catch(error => console.error(error));
+    }
+</script>
+  <script src="script.js"></script>
+  <script src="mainscript.js"></script>
+</html>
